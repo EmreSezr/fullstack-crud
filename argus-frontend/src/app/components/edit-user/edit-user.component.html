@@ -1,0 +1,38 @@
+<div class="container mt-5 card col-md-6" *ngIf="user">
+  <h2>{{ user.firstName }}</h2>
+  <div class="col-md-6">Isim :</div>
+  <input
+    class="col-md-6"
+    [(ngModel)]="user.firstName"
+    placeholder="Kullanıcı adı"
+  />
+  <div class="col-md-6">Soyisim :</div>
+  <input
+    class="col-md-6"
+    [(ngModel)]="user.lastName"
+    placeholder="Kullanıcı soyadı"
+  />
+  <div class="col-md-6">Dogum Tarihi :</div>
+  <input class="col-md-6" [(ngModel)]="user.birthDate" bsDatepicker />
+  <button
+    class="btn btn-success cold-md-12 mt-2"
+    (click)="updateUser(user)"
+    *ngIf="user.id"
+  >
+    Güncelle
+  </button>
+  <button
+    class="btn btn-danger cold-md-12 mt-2"
+    (click)="deleteUser(user)"
+    *ngIf="user.id"
+  >
+    Sil
+  </button>
+  <button
+    class="btn btn-success cold-md-12 mt-2"
+    (click)="createUser(user)"
+    *ngIf="!user.id"
+  >
+    Kaydet
+  </button>
+</div>
