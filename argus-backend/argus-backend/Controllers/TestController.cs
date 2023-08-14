@@ -18,7 +18,7 @@ namespace argus_backend.Controllers
 
 
         [HttpGet]
-        [Route("api/User")]
+        [Route("api/getUsers")]
         public async Task<ActionResult<List<User>>> GetUsers()
         {
             return Ok(await _context.Users.ToListAsync());

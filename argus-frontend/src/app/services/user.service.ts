@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root',
 })
 export class UserService {
-  private urlGet = 'User';
+  private urlGet = 'getUsers';
   private urlPost = 'saveUser';
   private urlUpdate = 'updateUser';
   private urlDelete = 'deleteUser';
